@@ -1,0 +1,41 @@
+.bg{
+    position: relative;
+    z-index: 1;
+    height: 70%;
+    background: url("../../../assets/img/ballpen-blur-close-up-461077.jpg") no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.profile{
+    position: absolute;
+    top: 40%;
+    z-index: 99;
+    left:45%;
+    background: rgba(145, 155, 168, 0.623);
+    padding: 20px;
+    color: #333;
+}
+.img-profile{
+    width:150px;
+    height: 150px;
+    background: url(../../../assets/img/imgprofile.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bt-Hire{
+    position: absolute;
+    bottom: 200px;
+    font-size: 50px;
+    color: #333;
+    padding: 25px;
+    background: #ddd7;
+    border-radius: 25px;
+    margin-left: -100px;
+}
+.bg-opacity{
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background: #ddd1;
+}
