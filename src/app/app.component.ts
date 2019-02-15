@@ -7,7 +7,7 @@ import { trigger,transition, group, query, style, animate} from '@angular/animat
   styleUrls: ['./app.component.css'],
   animations:[
     trigger('SplashPage => HomePage',[
-      
+
     ])
   ]
 })
