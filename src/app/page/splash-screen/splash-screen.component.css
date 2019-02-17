@@ -5,6 +5,8 @@
     position: relative;
     overflow: hidden;
     background-color: #ddd;
+    animation-delay: 2s;
+
   }
   .loader:before{
     display: block;
@@ -14,42 +16,62 @@
     width: 200px;
     height: 4px;
     background-color: #2980b9;
-    animation: loading 2s linear infinite;
-    -webkit-animation: loading 2s linear infinite;
+    animation: loading 2s linear ;
+    -webkit-animation: loading 2s linear ;
   }
   .fullview{
       width: 100%;
       height: 100%;
+      display: block;
+  }
+
+  .bg-group{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+  }
+  .bg{
+    width: 150%;
+    height: 33.33333333333333%;
+    background: rgb(0, 9, 22);
+    
   }
   .animation{
       position: relative;
-      top:45%;
-      margin-top: 50px;
+      top:400px;
+      z-index: 99;
   }
   .text-name-anim{
     position: relative;
     opacity: 0;
     top: 25px;
-    animation: name 2s  infinite;
-    -webkit-animation: name 2s 1s infinite;
+    animation: name 2s ;
+    -webkit-animation: name 2s ;
+    color: rgb(231, 238, 243);
   }
  
   @-webkit-keyframes name {
-    from {top:25px;opacity: 0;}
-    to {top:0;opacity: 1;}
+    from {top:0px;opacity: 0;}
+    30% {top:10;opacity: 1}
+    50% {top:10;opacity: 1}
+    to {top:0px;opacity: 0;}
 }
   @keyframes name {
-    from {top:25px;opacity: 0;}
-    to {top:0;opacity: 1;}
+    from {top:0px;opacity: 0;}
+    30% {top:10px;opacity: 1}
+    50% {top:10px;opacity: 1}
+    to {top:0px;opacity: 0;}
   }
 
   @-webkit-keyframes loading {
     from {left: 0%;width: 0px;}
-    70% {left:0%;width: 100%;}
-    to {left:200%;width: 100%;}
+    50% {left:0%;width: 100%;}
+    to {left:200%;width: 100%;opacity: 0;}
 }
   @keyframes loading {
       from {left: 0%;width: 0px;}
-      70% {left:0%;width: 100%;}
-      to {left:200%;width: 100%;}
+      50% {left:0%;width: 100%;}
+      to {left:200%;width: 100%;opacity: 0;}
   }
