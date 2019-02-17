@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
 import { AboutComponent } from './page/about/about.component';
 import { SplashScreenComponent } from './page/splash-screen/splash-screen.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {path:'',redirectTo:"/splash-screen",pathMatch:"full"},
@@ -11,10 +13,4 @@ const routes: Routes = [
   {path:'about',component:AboutComponent}
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {
-
- }
+export const AppRoutingModule = RouterModule.forRoot(routes)

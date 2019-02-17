@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms"
@@ -29,7 +30,9 @@ import { SplashScreenComponent } from './page/splash-screen/splash-screen.compon
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+     BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

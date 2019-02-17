@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, stagger, animate, style, group, query as q, transition, keyframes } from '@angular/animations';
-const query = (s, a, o = { optional: true }) => q(s, a, o);
+import { trigger, stagger, animate, style, group, query, transition, keyframes } from '@angular/animations';
+// const query = (s, a, o = { optional: true }) => q(s, a, o);
 
 // trigger('homeTransition',[
 //   transition(':enter',[
@@ -12,11 +12,11 @@ const query = (s, a, o = { optional: true }) => q(s, a, o);
 // ])
 export const homeTransition = trigger('homeTransition', [
   transition(':enter', [
-    query('.circle', style({ opacity: 0 })),
+    query('.circle', style({ opacity: 0 }),{optional:true}),
     query('.circle',  [
       style({ top: '55%' }),
       animate('1s cubic-bezier(.75,-0.48,.26,1.52)', style({top: '50%', opacity: 1})),
-    ]),
+    ],{optional:true}),
   ]),
  
 ]);
